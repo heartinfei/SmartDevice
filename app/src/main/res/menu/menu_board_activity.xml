@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/actionPlay"
+            app:showAsAction="ifRoom"
+            android:title="@string/playback"/>
+
+    <item android:id="@+id/actionClean"
+          app:showAsAction="ifRoom"
+          android:title="@string/clean_data"/>
+
+    <item android:id="@+id/actionCreate"
+            app:showAsAction="ifRoom"
+            android:title="@string/create_note"/>
+</menu>

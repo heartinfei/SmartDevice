@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">SmartDevice</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_name">NoteHub</string>
+    <string name="connect_ble_device">连接BLE设备</string>
+    <string name="connect_usb_device">连接USB设备</string>
+    <string name="default_board">默认白板</string>
+    <string name="note">笔记本</string>
+    <string name="clean_data">清除数据</string>
+
+    <string name="clear">清屏</string>
+    <string name="previous">上一页</string>
+    <string name="next">下一页</string>
+    <string name="disconnect">断开连接</string>
+    <string name="sync">同步</string>
+    <string name="record_start">开始录制</string>
+    <string name="record_stop">结束录制</string>
+    <string name="playback">重放</string>
+    <string name="stop_playback">停止播放</string>
+    <string name="create_note">新建</string>
 </resources>

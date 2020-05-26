@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".module.board.BLEBoardActivity">
+    <!--播放录制按钮-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+        <Button
+                android:id="@+id/btnRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/record_start" />
+
+        <Button
+                android:id="@+id/btnPlayback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/playback" />
+    </LinearLayout>
+
+    <!--工具条-->
+    <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="42dp"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+            <ImageView
+                    android:id="@+id/cbRestore"
+                    style="@style/style_toolbar_rb_item"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/selector_icon_restore" />
+
+            <RadioGroup
+                    android:id="@+id/rgColors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                        android:id="@+id/rbRed"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_red" />
+
+                <RadioButton
+                        android:id="@+id/rbBlue"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_blue" />
+
+                <RadioButton
+                        android:id="@+id/rbBlack"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_black"
+                        android:checked="true" />
+            </RadioGroup>
+
+            <RadioGroup
+                    android:id="@+id/rgPaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                        android:id="@+id/rbLevel1"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_level_1" />
+
+                <RadioButton
+                        android:id="@+id/rbLevel2"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_level_2"
+                        android:checked="true" />
+
+                <RadioButton
+                        android:id="@+id/rbLevel3"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_level_3" />
+
+                <RadioButton
+                        android:id="@+id/rbLevel4"
+                        style="@style/style_toolbar_rb_item"
+                        android:button="@drawable/selector_icon_level_4" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.apeman.sdk.widget.BoardView
+            android:id="@+id/boardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#7D7D7D"
+            android:keepScreenOn="true"
+            app:playBackInterval="10"
+            app:recordQuality="0.5"
+            app:recordRate="16" />
+</LinearLayout>
